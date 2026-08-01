@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>App to List 3</title>
+    <title>Controle de Estoque</title>
 </head>
 <body>
     <div class="wrapper">
@@ -21,8 +21,8 @@
 
                 <div class="welcome">
                     <div class="content">
-                        <h1>Olá Bolsonaro!</h1>
-                        <p>Hoje você tem 5 tarefas.</p>
+                        <h1>Estoque</h1>
+                        <p></p>
                     </div>
 
                     <div class="img">
@@ -41,8 +41,8 @@
                         <div class="left">
                             <img src="img/briefcase.png" alt="">
                             <div class="content">
-                                <h1>Trabalho</h1>
-                                <p>5 demandas</p>
+                                <h1>Hortifruti</h1>
+                                <p></p>
                             </div>
                         </div>
 
@@ -55,12 +55,13 @@
                         </div>
                       
                     </div>
+
                     <div class="categoria">
                         <div class="left">
                             <img src="img/calendar.png" alt="">
                             <div class="content">
-                                <h1>Agenda</h1>
-                                <p>5 Eventos</p>
+                                <h1>Açougue</h1>
+                                <p></p>
                             </div>
                         </div>
 
@@ -73,12 +74,13 @@
                         </div>
                       
                     </div>
+
                     <div class="categoria">
                         <div class="left">
                             <img src="img/dumbbell.png" alt="">
                             <div class="content">
-                                <h1>Gym</h1>
-                                <p>5 exercício</p>
+                                <h1>Padaria</h1>
+                                <p></p>
                             </div>
                         </div>
 
@@ -90,6 +92,42 @@
                             </div>
                         </div>
                       
+                    </div>
+
+                    <div class="categoria">
+                        <div class="left">
+                            <img src="img/briefcase.png" alt="">
+                            <div class="content">
+                                <h1>Bebidas</h1>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="options">
+                            <div class="toggle_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="categoria">
+                        <div class="left">
+                            <img src="img/briefcase.png" alt="">
+                            <div class="content">
+                                <h1>Doces</h1>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="options">
+                            <div class="toggle_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -101,7 +139,7 @@
             
             <div class="head_wrapper">
                 <div class="back_btn">
-                    <svg xmlns="http://www.w3.org/2000/svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
                     </svg>
                 </div>
@@ -112,58 +150,20 @@
                         </svg>
                 </div>
             </div>
-        <div class = "categoria-details">
-            <img src="img/boy.png" alt="" id="categoria-img">
+        <div class="categoria-details">
+            <span class="cat-icon" id="categoria-icon">📦</span>
             <div class="details">
-                <p>8 tarefas</p>
-                <h1>Personal</h1>
+                <p id="num-produtos"></p>
+                <h1 id="categoria-titulo"></h1>
             </div>
         </div>
-        <div class="tarefas-wrapper">
-    <div class="tarefas">
-        <label class="tarefa-item">
-            <input type="checkbox" id="tarefa1">
-            <span class="checkmark">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M4.5 12.75l6 6 9-13.5"
-                    />
-                </svg>
-            </span>
-            <p>Estudar lógica de programação</p>
-
-                    <div class="delete">
-            <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                  />
-            </svg>
+        <div class="produtos-wrapper">
+            <div class="produtos">
+            </div>
         </div>
-        </label>
-
-    </div>
 </div>
 
-    </div>
-
-    <div class="add-tarefa-btn">
+    <div class="add-produto-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -182,11 +182,18 @@
 
     <div class="back-backdrop"></div>
 
-    <div class="add-tarefas">
-        <h1 class="heading">Adicionar tarefa</h1>
+    <div class="add-produto">
+        <div class="add-produto-backdrop"></div>
+        <h1 class="heading">Adicionar produto</h1>
         <div class="input-group">
-            <label for="tarefa-input">tarefa</label>
-            <input type="text" id="tarefa-input" required>
+            <label for="produto-input">Nome do produto</label>
+            <input type="text" id="produto-input" required>
+
+            <label for="quantidade-input">Quantidade</label>
+            <input type="number" id="quantidade-input" required>
+
+            <label for="validade-input">Validade</label>
+            <input type="date" id="validade-input" required>
         </div>
     </div>
 
