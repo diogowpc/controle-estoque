@@ -192,6 +192,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 30px;
 }
 
 .categorias-screen .head_wrapper svg {
@@ -232,11 +233,11 @@ body{
 
 .produtos .produto-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.75rem;
+    width: 100%;
     font-size: 0.85rem;
     font-weight: 500;
-    cursor: pointer;
 }
 
 .produtos input {
@@ -342,16 +343,16 @@ body{
     bottom: 0;
 }
 
-.back-backdrop {
+.back-backdrop{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000023;
+    inset: 0;
+    background: rgba(0,0,0,.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(6px);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s;
+    transition: .3s;
+    z-index: 5;
 }
 
 .back-backdrop.active {
@@ -386,4 +387,158 @@ body{
 .produto-info p{
     color: #8e8d8d;
     font-size: .85rem;
+}
+
+.produto-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.produto-actions button{
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.produto-actions svg{
+    transition: transform 0.5s ease, color 0.5s ease;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+}
+
+.produto-actions .editar:hover svg{
+    transform: scale(1.15);
+    color: #00b9c0;
+}
+
+.produto-actions .excluir:hover svg{
+    transform: scale(1.15);
+    color: red;
+}
+
+
+/* formulário adicionar produto */
+
+.add-produto {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 25px 30px;
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+
+.add-produto.active {
+    bottom: 0;
+}
+
+
+.add-produto .heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* grupo dos inputs */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.input-group label {
+    font-size: .85rem;
+    font-weight: 600;
+    margin-top: .8rem;
+}
+
+
+.input-group input {
+    width: 100%;
+    height: 2.8rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 0 15px;
+    font-size: .9rem;
+    outline: none;
+    font-family: "Inter";
+    transition: .3s;
+}
+
+
+.input-group input:focus {
+    border-color: #00b9c0;
+    box-shadow: 0 0 0 3px #00b9c033;
+}
+
+
+/* botão */
+
+#salvar-produto {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #00b9c0;
+    color: #2e2e2e;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+#salvar-produto:hover {
+    transform: scale(1.03);
+}
+
+.add-produto-btn{
+    transition: all .35s ease;
+}
+
+.add-produto-btn svg{
+    transition: transform .35s ease;
+}
+
+.add-produto-btn.active{
+    bottom: 28.9rem;   /* ajuste conforme a altura do formulário */
+}
+
+.add-produto-btn.active svg{
+    transform: rotate(45deg);
+}
+
+.add-produto{
+    z-index: 10;
+}
+
+.add-produto-btn{
+    z-index: 11;
+}
+
+.input-group select{
+    width: 100%;
+    height: 2.8rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 0 15px;
+    font-family: "Inter";
+    font-size: .9rem;
+    outline: none;
+}
+
+.input-group select:focus{
+    border-color: #00b9c0;
 }
