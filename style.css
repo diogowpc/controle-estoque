@@ -82,7 +82,7 @@ body{
 }
 
 .welcome h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .welcome p {
@@ -91,10 +91,17 @@ body{
 
 .welcome .img{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome .img img{
-    width: 5rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    z-index: 1;
+    transform: translateY(7px);
 }
 
 .welcome .img .backdrop{
@@ -350,4 +357,33 @@ body{
 .back-backdrop.active {
     opacity: 1;
     visibility: visible;
+}
+
+.status{
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .35rem .8rem;
+    border-radius: 20px;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.status.valido{
+    color: #15803d;
+    background-color: #dcfce7;
+}
+
+.status.proximo{
+    color: #a16207;
+    background-color: #fef9c3;
+}
+
+.status.vencido{
+    color: #b91c1c;
+    background-color: #fee2e2;
+}
+
+.produto-info p{
+    color: #8e8d8d;
+    font-size: .85rem;
 }
